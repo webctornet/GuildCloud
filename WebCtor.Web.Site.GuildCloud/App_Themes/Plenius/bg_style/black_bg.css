@@ -32,21 +32,21 @@
 
 /* line 44, ../../../sass/bg_style/black_bg.css.scss */
 body {
-  background: url(../../images/bg_black.png);
+  background: url(../images/bg_black.png);
 }
 
 /* line 47, ../../../sass/bg_style/black_bg.css.scss */
 body .container .highlight {
-  background: url(../../images/bg_body_black.png);
+  background: url(../images/bg_body_black.png);
 }
 
 /* line 50, ../../../sass/bg_style/black_bg.css.scss */
 html body .footer_texture {
-  background: url(../../images/footer-texture-black.png);
+  background: url(../images/footer-texture-black.png);
 }
 /* line 52, ../../../sass/bg_style/black_bg.css.scss */
 html body .footer_texture .inner {
-  background: url(../../images/inner-black.png) repeat-x;
+  background: url(../images/inner-black.png) repeat-x;
 }
 
 /* line 56, ../../../sass/bg_style/black_bg.css.scss */

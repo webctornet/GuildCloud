@@ -1,20 +1,20 @@
 /* line 7, ../../../sass/bg_style/blue_bg.css.scss */
 body {
-  background: url(../../images/bg.png);
+  background: url(images//bg.png);
 }
 
 /* line 10, ../../../sass/bg_style/blue_bg.css.scss */
 body .container .highlight {
-  background: url(../../images/bg_body.png);
+  background: url(images//bg_body.png);
 }
 
 /* line 13, ../../../sass/bg_style/blue_bg.css.scss */
 html body .footer_texture {
-  background: url(../../images/footer-texture.png);
+  background: url(images//footer-texture.png);
 }
 /* line 15, ../../../sass/bg_style/blue_bg.css.scss */
 html body .footer_texture .inner {
-  background: url(../../images/inner.png) repeat-x;
+  background: url(images//inner.png) repeat-x;
 }
 
 /* line 19, ../../../sass/bg_style/blue_bg.css.scss */

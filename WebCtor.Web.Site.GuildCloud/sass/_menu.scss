@@ -9,7 +9,7 @@
 	}
 	.first-level > li{
 		@include float-left;
-		background:url(../images/menu_separator.png) no-repeat right 10px;
+		background:url(images/menu_separator.png) no-repeat right 10px;
 		list-style:none;
 		padding:0 6px 0 0;
 		&.last{

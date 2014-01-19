@@ -141,43 +141,43 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* line 214, ../../../sass/color_style/blue_items.css.scss */
 .list_1 li {
-  background: url("../../images/blue/list_1.png") 0 6px no-repeat;
+  background: url("../images/blue/list_1.png") 0 6px no-repeat;
   padding: 0 0 0 13px;
 }
 
 /* line 218, ../../../sass/color_style/blue_items.css.scss */
 .list_2 li {
-  background: url("../../images/blue/list_2.png") 0 4px no-repeat;
+  background: url("../images/blue/list_2.png") 0 4px no-repeat;
   padding: 0 0 0 20px;
 }
 
 /* line 222, ../../../sass/color_style/blue_items.css.scss */
 .list_3 li {
-  background: url("../../images/blue/list_3.png") 0 7px no-repeat;
+  background: url("../images/blue/list_3.png") 0 7px no-repeat;
   padding: 0 0 0 12px;
 }
 
 /* line 226, ../../../sass/color_style/blue_items.css.scss */
 .list_4 li {
-  background: url("../../images/blue/list_4.png") 0 6px no-repeat;
+  background: url("../images/blue/list_4.png") 0 6px no-repeat;
   padding: 0 0 0 15px;
 }
 
 /* line 230, ../../../sass/color_style/blue_items.css.scss */
 .list_5 li {
-  background: url("../../images/blue/list_5.png") 0 3px no-repeat;
+  background: url("../images/blue/list_5.png") 0 3px no-repeat;
   padding: 0 0 0 20px;
 }
 
 /* line 234, ../../../sass/color_style/blue_items.css.scss */
 .list_6 li {
-  background: url("../../images/blue/list_6.png") 0 7px no-repeat;
+  background: url("../images/blue/list_6.png") 0 7px no-repeat;
   padding: 0 0 0 20px;
 }
 
 /* line 243, ../../../sass/color_style/blue_items.css.scss */
 .content .sidebar-left .categories ul li a:hover, .content .sidebar-left .archive ul li a:hover {
-  background: url(../../images/blue/list_7h.png) no-repeat 7px 13px;
+  background: url(../images/blue/list_7h.png) no-repeat 7px 13px;
   -webkit-transition: background-position 0.2s, padding-left 0.2s, color 0.2s;
   -moz-transition: background-position 0.2s, padding-left 0.2s, color 0.2s;
   -o-transition: background-position 0.2s, padding-left 0.2s, color 0.2s;
@@ -236,48 +236,48 @@ html body .footer_texture .inner footer .widget-1 .social .social-tooltip {
 }
 /* line 322, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .tweeter {
-  background-image: url(../../images/tweeter.png);
+  background-image: url(../images/tweeter.png);
 }
 /* line 324, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .tweeter:hover {
-  background: url(../../images/blue/tweeter_h.png);
+  background: url(../images/blue/tweeter_h.png);
 }
 /* line 328, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .facebook {
-  background-image: url(../../images/facebook.png);
+  background-image: url(../images/facebook.png);
 }
 /* line 330, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .facebook:hover {
-  background: url(../../images/blue/facebook_h.png);
+  background: url(../images/blue/facebook_h.png);
 }
 /* line 334, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .vimeo {
-  background-image: url(../../images/vimeo.png);
+  background-image: url(../images/vimeo.png);
 }
 /* line 336, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .vimeo:hover {
-  background: url(../../images/blue/vimeo_h.png);
+  background: url(../images/blue/vimeo_h.png);
 }
 /* line 340, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .linkedin {
-  background-image: url(../../images/linkedin.png);
+  background-image: url(../images/linkedin.png);
 }
 /* line 342, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .linkedin:hover {
-  background: url(../../images/blue/linkedin_h.png);
+  background: url(../images/blue/linkedin_h.png);
 }
 /* line 346, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .flickr {
-  background-image: url(../../images/flickr.png);
+  background-image: url(../images/flickr.png);
 }
 /* line 348, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-1 .social .flickr:hover {
-  background: url(../../images/blue/flickr_h.png);
+  background: url(../images/blue/flickr_h.png);
 }
 /* line 358, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .widget-2 ul li a.active, html body .footer_texture .inner footer .widget-2 ul li a:hover {
   color: #4386cf;
-  background: url(../../images/blue/list_7h.png) no-repeat 8px 12px;
+  background: url(../images/blue/list_7h.png) no-repeat 8px 12px;
 }
 /* line 371, ../../../sass/color_style/blue_items.css.scss */
 html body .footer_texture .inner footer .copyrights-box .foot-menu ul li a:hover {

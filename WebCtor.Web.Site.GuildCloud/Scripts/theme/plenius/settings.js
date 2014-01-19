@@ -2,7 +2,7 @@
 	function change_img(color_theme){
 		$('.color_img').each(function(){
 			url = $(this).attr('src').split('/');
-			url.splice(1,1,color_theme);
+			url.splice(4,1,color_theme);
 			new_url = url.join('/');
 			$(this).attr('src', new_url);				
 		})
@@ -47,6 +47,7 @@
 			case 'turquoise_items': 	cookie_colors_style='turquoise' 
 			break
 		}
+		cookie_colors_style = 'yellow';
 		colors_style.attr('href','css/color_style/'+$.cookie('color_theme')+'.css');
 		change_img(cookie_colors_style);
 		$('.description-404 .btn').removeClass().addClass('btn long '+cookie_colors_style)

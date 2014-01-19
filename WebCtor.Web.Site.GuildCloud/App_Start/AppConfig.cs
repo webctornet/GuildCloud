@@ -46,7 +46,8 @@ namespace WebCtor.Web.Site.GuildCloud
                  "~/Scripts/lib/modernizr/*.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/libs").Include(
-                 "~/Scripts/lib/jquery/*.js"));
+                 "~/Scripts/lib/jquery/*.js",
+                 "~/Scripts/lib/jquery/i18n/*.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/theme/plenius").Include(
                 "~/Scripts/theme/plenius/form_validation.js",
