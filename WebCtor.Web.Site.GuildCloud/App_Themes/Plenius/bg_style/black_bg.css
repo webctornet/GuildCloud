@@ -1,0 +1,80 @@
+/* line 15, ../../../sass/bg_style/black_bg.css.scss */
+.price-table {
+  border-bottom: 1px solid #515151;
+  border-right: 1px solid #515151;
+}
+/* line 19, ../../../sass/bg_style/black_bg.css.scss */
+.price-table .column .td {
+  background: #313131;
+  border-left: 1px solid #515151;
+}
+/* line 23, ../../../sass/bg_style/black_bg.css.scss */
+.price-table .column .title {
+  background-color: #4c4d4d;
+}
+/* line 26, ../../../sass/bg_style/black_bg.css.scss */
+.price-table .column .price {
+  background-color: #3e3e3e;
+}
+/* line 29, ../../../sass/bg_style/black_bg.css.scss */
+.price-table .column .confirm {
+  background-color: #3e3e3e;
+}
+/* line 33, ../../../sass/bg_style/black_bg.css.scss */
+.price-table .column.active .td {
+  border-right: 1px solid #515151;
+}
+/* line 36, ../../../sass/bg_style/black_bg.css.scss */
+.price-table .column.active .confirm {
+  background-color: #3e3e3e;
+  border-bottom: 1px solid #515151;
+}
+
+/* line 44, ../../../sass/bg_style/black_bg.css.scss */
+body {
+  background: url(../../images/bg_black.png);
+}
+
+/* line 47, ../../../sass/bg_style/black_bg.css.scss */
+body .container .highlight {
+  background: url(../../images/bg_body_black.png);
+}
+
+/* line 50, ../../../sass/bg_style/black_bg.css.scss */
+html body .footer_texture {
+  background: url(../../images/footer-texture-black.png);
+}
+/* line 52, ../../../sass/bg_style/black_bg.css.scss */
+html body .footer_texture .inner {
+  background: url(../../images/inner-black.png) repeat-x;
+}
+
+/* line 56, ../../../sass/bg_style/black_bg.css.scss */
+.main-menu .second-level {
+  background: #373737;
+}
+
+/* line 59, ../../../sass/bg_style/black_bg.css.scss */
+.main-menu .second-level > li > a {
+  border-top: 1px solid #434343;
+}
+
+/* line 62, ../../../sass/bg_style/black_bg.css.scss */
+.plenius-form .field, .search-form .field {
+  background: #343434;
+  -webkit-box-shadow: inset 0 2px 3px #242729;
+  -moz-box-shadow: inset 0 2px 3px #242729;
+  box-shadow: inset 0 2px 3px #242729;
+  border: 1px solid #242729;
+  border-bottom: 1px solid #55595b;
+}
+
+/* line 69, ../../../sass/bg_style/black_bg.css.scss */
+footer .plenius-form .field, footer .search-form .field {
+  background: #343434;
+  -webkit-box-shadow: inset 0 2px 3px #242729;
+  -moz-box-shadow: inset 0 2px 3px #242729;
+  box-shadow: inset 0 2px 3px #242729;
+  border: 1px solid #242729;
+  border-bottom: 1px solid #55595b;
+}

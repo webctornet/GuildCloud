@@ -1,0 +1,116 @@
+@mixin portfolio (){
+	h2{
+		float:left;
+	}
+	.portfolio-items{
+		@include clearfix();
+		clear:both;
+		margin-left:-30px;
+		margin-bottom:-30px;
+		.item{
+			@include float-left;
+			@include item-hover();  //including animation on block hover;
+			margin-bottom: 30px;
+			margin-left: 30px;
+		}
+	}
+	.more{
+		@include OpenSanslight(18px);
+		display: block;
+		width: 105px;
+		height: 35px;
+		background:url(../images/bottom-arrow.png) no-repeat 44px 28px;
+		color: $color-1;
+		margin: 0 auto;
+		&:hover{
+			text-decoration: none;
+			color: $color-5;
+		}
+	}
+}
+
+.portfolio-navigation{
+	float:right;
+	a{
+		color: $color-1;
+		padding:0 5px;
+		&:hover, &.active{
+			color: $color-5;
+		}
+		&:first-child{
+			padding-left:0px;
+		}
+	}
+}
+
+
+.portfolio{
+	margin-bottom: 40px;
+	&.c-4{
+		@include clearfix();
+		@include portfolio();
+		.item{
+			width: 212px;
+			height: 120px;
+			margin-bottom: 30px;
+			margin-left:30px;
+			.item-description{
+				width: 182px;
+				height: 60px;
+				padding: 30px 15px;
+			}
+		}
+	}
+	&.c-3{
+		@include clearfix();
+		@include portfolio();
+		.item{
+			width: 290px;
+			height: 165px;
+			margin-bottom:30px;
+			margin-left:32px;
+			.item-description{
+				width: 250px;
+				height: 105px;
+				padding: 30px 20px;
+			}
+		}
+	}
+	&.c-2{
+		@include clearfix();
+		@include portfolio();
+		.item{
+			width: 450px;
+			height: 257px;
+			margin-bottom:30px;
+			margin-left:32px;
+			.item-description{
+				width: 410px;
+				height: 167px;
+				padding: 60px 20px 30px;
+			}
+		}
+	}
+	&.c-1{
+		.portfolio-items{
+			.item{
+				.item-image{
+					width:70%;
+					float:left;
+					background: $color-21;
+					margin-right:30px;
+					img{
+						width: 100%;
+					}
+				}
+				.item-description{
+					overflow:hidden;
+					h3{
+						line-height: 1.3em;
+					}
+				}
+			}
+		}
+	}
+}
+

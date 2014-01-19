@@ -1,0 +1,97 @@
+@mixin item-hover(){
+	position: relative;
+	overflow: hidden;
+	transition: width 2s;
+	.item-image{
+		position: absolute;
+		background: $color-21;
+		height: 100%; 
+		width:100%;
+		overflow:hidden;
+		img{
+			width:100%;
+		}
+	}
+	.overlay{
+		@include transition(top 0.2s);
+		@include opacity(0.85);
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		height: 100%;
+		background: $color-5;
+	}
+	.item-description{
+		@include transition(left 0.2s);
+		@include transition-delay(0.15s);
+		position: absolute;
+		left: 100%;
+		width: 100%;
+		height: 100%;
+		h3{
+			padding-bottom: 10px;
+			line-height:1.3em;
+		}
+	}
+	.social{
+		@include transition(right 0.2s);
+		@include transition-delay(0.15s);
+		position: absolute;
+		top: 175px;
+		right: 100%;
+		width: 170px;
+		height: 31px;
+	}
+	.start{
+		@include transition(bottom 0.2s);
+		@include transition-delay(0.1s);
+		display: block;
+		width: 21px;
+		height: 21px;
+		position: absolute;
+		bottom: 100%;
+		right: 1px;
+		&.picture{
+			background:url(../images/start.jpg) no-repeat;
+		}
+		&.video{
+			background:url(../images/video.jpg) no-repeat;
+		}
+	}
+	.start-2{
+		@include transition(bottom 0.2s);
+		@include transition-delay(0.1s);
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		bottom: 130%;
+		right: 50%;
+		margin-right:-15px;
+		margin-bottom:-15px;
+		&.picture{
+			background:url(../images/picture-2.png) no-repeat;
+		}
+		&.video{
+			background:url(../images/video-2.png) no-repeat;
+		}
+	}
+	&:hover{
+		.overlay{
+			top:0px;
+		}
+		.item-description{
+			left:0px;
+		}
+		.social{
+			right:20px;
+		}
+		.start{
+			bottom: 1px;
+		}
+		.start-2{
+			bottom: 50%;
+			
+		}
+	}
+}

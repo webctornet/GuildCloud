@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <IsCompassProject>True</IsCompassProject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,7 +40,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.3.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc5.3.1.0\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.WebApi2.3.1.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -49,6 +71,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -56,6 +81,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -90,12 +118,326 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Plenius\bg_style\black_bg.css" />
+    <Content Include="App_Themes\Plenius\bg_style\blue_bg.css" />
+    <Content Include="App_Themes\Plenius\bootstrap-responsive.css" />
+    <Content Include="App_Themes\Plenius\bootstrap.css" />
+    <Content Include="App_Themes\Plenius\color_style\blue_items.css" />
+    <Content Include="App_Themes\Plenius\color_style\green_items.css" />
+    <Content Include="App_Themes\Plenius\color_style\red_items.css" />
+    <Content Include="App_Themes\Plenius\color_style\turquoise_items.css" />
+    <Content Include="App_Themes\Plenius\color_style\yellow_items.css" />
+    <Content Include="App_Themes\Plenius\images\about_03.jpg" />
+    <Content Include="App_Themes\Plenius\images\about_05.jpg" />
+    <Content Include="App_Themes\Plenius\images\about_07.jpg" />
+    <Content Include="App_Themes\Plenius\images\arrow-left.png" />
+    <Content Include="App_Themes\Plenius\images\arrow-right.png" />
+    <Content Include="App_Themes\Plenius\images\bg-block-light.png" />
+    <Content Include="App_Themes\Plenius\images\bg-block.png" />
+    <Content Include="App_Themes\Plenius\images\bg-tab.png" />
+    <Content Include="App_Themes\Plenius\images\bg-toggle-minus-light.png" />
+    <Content Include="App_Themes\Plenius\images\bg-toggle-minus.png" />
+    <Content Include="App_Themes\Plenius\images\bg-toggle-plus-light.png" />
+    <Content Include="App_Themes\Plenius\images\bg-toggle-plus.png" />
+    <Content Include="App_Themes\Plenius\images\bg.png" />
+    <Content Include="App_Themes\Plenius\images\bg_black.png" />
+    <Content Include="App_Themes\Plenius\images\bg_body.png" />
+    <Content Include="App_Themes\Plenius\images\bg_body_black.png" />
+    <Content Include="App_Themes\Plenius\images\blog_01.jpg" />
+    <Content Include="App_Themes\Plenius\images\blog_02.jpg" />
+    <Content Include="App_Themes\Plenius\images\blog_03.jpg" />
+    <Content Include="App_Themes\Plenius\images\blog_04.jpg" />
+    <Content Include="App_Themes\Plenius\images\blog_05.jpg" />
+    <Content Include="App_Themes\Plenius\images\blog_06.jpg" />
+    <Content Include="App_Themes\Plenius\images\blog_08.jpg" />
+    <Content Include="App_Themes\Plenius\images\blue.png" />
+    <Content Include="App_Themes\Plenius\images\blue\announcement.png" />
+    <Content Include="App_Themes\Plenius\images\blue\chatsupport.png" />
+    <Content Include="App_Themes\Plenius\images\blue\developertools.png" />
+    <Content Include="App_Themes\Plenius\images\blue\facebook_h.png" />
+    <Content Include="App_Themes\Plenius\images\blue\flickr_h.png" />
+    <Content Include="App_Themes\Plenius\images\blue\freshideas.png" />
+    <Content Include="App_Themes\Plenius\images\blue\linkedin_h.png" />
+    <Content Include="App_Themes\Plenius\images\blue\list_1.png" />
+    <Content Include="App_Themes\Plenius\images\blue\list_2.png" />
+    <Content Include="App_Themes\Plenius\images\blue\list_3.png" />
+    <Content Include="App_Themes\Plenius\images\blue\list_4.png" />
+    <Content Include="App_Themes\Plenius\images\blue\list_5.png" />
+    <Content Include="App_Themes\Plenius\images\blue\list_6.png" />
+    <Content Include="App_Themes\Plenius\images\blue\list_7h.png" />
+    <Content Include="App_Themes\Plenius\images\blue\socialnetwork.png" />
+    <Content Include="App_Themes\Plenius\images\blue\timespending.png" />
+    <Content Include="App_Themes\Plenius\images\blue\tweeter_h.png" />
+    <Content Include="App_Themes\Plenius\images\blue\vimeo_h.png" />
+    <Content Include="App_Themes\Plenius\images\bottom-arrow-black.png" />
+    <Content Include="App_Themes\Plenius\images\bottom-arrow.png" />
+    <Content Include="App_Themes\Plenius\images\client-1.png" />
+    <Content Include="App_Themes\Plenius\images\client-2.png" />
+    <Content Include="App_Themes\Plenius\images\client-3.png" />
+    <Content Include="App_Themes\Plenius\images\client-4.png" />
+    <Content Include="App_Themes\Plenius\images\client-5.png" />
+    <Content Include="App_Themes\Plenius\images\client-6.png" />
+    <Content Include="App_Themes\Plenius\images\default-image-black.jpg" />
+    <Content Include="App_Themes\Plenius\images\default-image-light.jpg" />
+    <Content Include="App_Themes\Plenius\images\default-image.jpg" />
+    <Content Include="App_Themes\Plenius\images\facebook-2.png" />
+    <Content Include="App_Themes\Plenius\images\facebook.png" />
+    <Content Include="App_Themes\Plenius\images\field.png" />
+    <Content Include="App_Themes\Plenius\images\flickr.png" />
+    <Content Include="App_Themes\Plenius\images\footer-marker.png" />
+    <Content Include="App_Themes\Plenius\images\footer-texture-black.png" />
+    <Content Include="App_Themes\Plenius\images\footer-texture.png" />
+    <Content Include="App_Themes\Plenius\images\google-2.png" />
+    <Content Include="App_Themes\Plenius\images\green\announcement.png" />
+    <Content Include="App_Themes\Plenius\images\green\chatsupport.png" />
+    <Content Include="App_Themes\Plenius\images\green\developertools.png" />
+    <Content Include="App_Themes\Plenius\images\green\facebook_h.png" />
+    <Content Include="App_Themes\Plenius\images\green\flickr_h.png" />
+    <Content Include="App_Themes\Plenius\images\green\freshideas.png" />
+    <Content Include="App_Themes\Plenius\images\green\linkedin_h.png" />
+    <Content Include="App_Themes\Plenius\images\green\list_1.png" />
+    <Content Include="App_Themes\Plenius\images\green\list_2.png" />
+    <Content Include="App_Themes\Plenius\images\green\list_3.png" />
+    <Content Include="App_Themes\Plenius\images\green\list_4.png" />
+    <Content Include="App_Themes\Plenius\images\green\list_5.png" />
+    <Content Include="App_Themes\Plenius\images\green\list_6.png" />
+    <Content Include="App_Themes\Plenius\images\green\list_7h.png" />
+    <Content Include="App_Themes\Plenius\images\green\socialnetwork.png" />
+    <Content Include="App_Themes\Plenius\images\green\timespending.png" />
+    <Content Include="App_Themes\Plenius\images\green\tweeter_h.png" />
+    <Content Include="App_Themes\Plenius\images\green\vimeo_h.png" />
+    <Content Include="App_Themes\Plenius\images\home_banner.jpg" />
+    <Content Include="App_Themes\Plenius\images\home_banner_1.jpg" />
+    <Content Include="App_Themes\Plenius\images\home_banner_2.jpg" />
+    <Content Include="App_Themes\Plenius\images\home_banner_3.jpg" />
+    <Content Include="App_Themes\Plenius\images\home_pic_1.jpg" />
+    <Content Include="App_Themes\Plenius\images\home_pic_2.jpg" />
+    <Content Include="App_Themes\Plenius\images\home_pic_3.jpg" />
+    <Content Include="App_Themes\Plenius\images\icon_access.png" />
+    <Content Include="App_Themes\Plenius\images\icon_help.png" />
+    <Content Include="App_Themes\Plenius\images\icon_info.png" />
+    <Content Include="App_Themes\Plenius\images\icon_warning.png" />
+    <Content Include="App_Themes\Plenius\images\inner-black.png" />
+    <Content Include="App_Themes\Plenius\images\inner.png" />
+    <Content Include="App_Themes\Plenius\images\linkedin-2.png" />
+    <Content Include="App_Themes\Plenius\images\linkedin.png" />
+    <Content Include="App_Themes\Plenius\images\list_7-light.png" />
+    <Content Include="App_Themes\Plenius\images\list_7.png" />
+    <Content Include="App_Themes\Plenius\images\loop.png" />
+    <Content Include="App_Themes\Plenius\images\map.jpg" />
+    <Content Include="App_Themes\Plenius\images\menu_separator.png" />
+    <Content Include="App_Themes\Plenius\images\picture-2.png" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_1.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_2.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_3.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_4.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_5.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_6.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_7.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_8.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_212_9.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_1.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_2.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_3.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_4.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_5.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_6.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_7.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_8.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_290_9.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_450_1.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_450_2.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_450_3.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_450_4.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_450_5.jpg" />
+    <Content Include="App_Themes\Plenius\images\portfolio_450_6.jpg" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\default\loader.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\default\sprite.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="App_Themes\Plenius\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="App_Themes\Plenius\images\quotes-corner-light.png" />
+    <Content Include="App_Themes\Plenius\images\quotes-corner.png" />
+    <Content Include="App_Themes\Plenius\images\red\announcement.png" />
+    <Content Include="App_Themes\Plenius\images\red\chatsupport.png" />
+    <Content Include="App_Themes\Plenius\images\red\developertools.png" />
+    <Content Include="App_Themes\Plenius\images\red\facebook_h.png" />
+    <Content Include="App_Themes\Plenius\images\red\flickr_h.png" />
+    <Content Include="App_Themes\Plenius\images\red\freshideas.png" />
+    <Content Include="App_Themes\Plenius\images\red\linkedin_h.png" />
+    <Content Include="App_Themes\Plenius\images\red\list_1.png" />
+    <Content Include="App_Themes\Plenius\images\red\list_2.png" />
+    <Content Include="App_Themes\Plenius\images\red\list_3.png" />
+    <Content Include="App_Themes\Plenius\images\red\list_4.png" />
+    <Content Include="App_Themes\Plenius\images\red\list_5.png" />
+    <Content Include="App_Themes\Plenius\images\red\list_6.png" />
+    <Content Include="App_Themes\Plenius\images\red\list_7h.png" />
+    <Content Include="App_Themes\Plenius\images\red\socialnetwork.png" />
+    <Content Include="App_Themes\Plenius\images\red\timespending.png" />
+    <Content Include="App_Themes\Plenius\images\red\tweeter_h.png" />
+    <Content Include="App_Themes\Plenius\images\red\vimeo_h.png" />
+    <Content Include="App_Themes\Plenius\images\settings\black_bg.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\blue.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\blue_bg.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\dark.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\green.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\light.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\red.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\settings_icon.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\turquoise.jpg" />
+    <Content Include="App_Themes\Plenius\images\settings\yellow.jpg" />
+    <Content Include="App_Themes\Plenius\images\start.jpg" />
+    <Content Include="App_Themes\Plenius\images\textarea.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\announcement.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\chatsupport.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\developertools.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\facebook_h.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\flickr_h.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\freshideas.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\linkedin_h.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\list_1.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\list_2.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\list_3.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\list_4.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\list_5.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\list_6.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\list_7h.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\socialnetwork.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\timespending.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\tweeter_h.png" />
+    <Content Include="App_Themes\Plenius\images\turquoise\vimeo_h.png" />
+    <Content Include="App_Themes\Plenius\images\tweeter-2.png" />
+    <Content Include="App_Themes\Plenius\images\tweeter.png" />
+    <Content Include="App_Themes\Plenius\images\video-2.png" />
+    <Content Include="App_Themes\Plenius\images\video.jpg" />
+    <Content Include="App_Themes\Plenius\images\vimeo-2.png" />
+    <Content Include="App_Themes\Plenius\images\vimeo.png" />
+    <Content Include="App_Themes\Plenius\images\white_bg.jpg" />
+    <Content Include="App_Themes\Plenius\images\wrap.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\announcement.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\chatsupport.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\developertools.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\facebook_h.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\flickr_h.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\freshideas.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\linkedin_h.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\list_1.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\list_2.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\list_3.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\list_4.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\list_5.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\list_6.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\list_7h.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\socialnetwork.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\timespending.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\tweeter_h.png" />
+    <Content Include="App_Themes\Plenius\images\yellow\vimeo_h.png" />
+    <Content Include="App_Themes\Plenius\prettyPhoto.css" />
+    <Content Include="App_Themes\Plenius\settings_style.css" />
+    <Content Include="App_Themes\Plenius\style.css" />
+    <Content Include="App_Themes\Plenius\style_light.css" />
     <Content Include="Global.asax" />
+    <Content Include="config.rb" />
+    <Content Include="log4net.config" />
+    <Content Include="sass\bg_style\black_bg.css.scss" />
+    <Content Include="sass\bg_style\blue_bg.css.scss" />
+    <Content Include="sass\blocks\_accordion.scss" />
+    <Content Include="sass\blocks\_clients.scss" />
+    <Content Include="sass\blocks\_main.scss" />
+    <Content Include="sass\blocks\_slider.scss" />
+    <Content Include="sass\blocks\_style-boxes.scss" />
+    <Content Include="sass\blocks\_tabs.scss" />
+    <Content Include="sass\color_style\yellow_items.css.scss" />
+    <Content Include="sass\elements\_base.scss" />
+    <Content Include="sass\elements\_base_light.scss" />
+    <Content Include="sass\elements\_buttons.scss" />
+    <Content Include="sass\elements\_forms.scss" />
+    <Content Include="sass\elements\_helper_classes.scss" />
+    <Content Include="sass\elements\_item_hover.scss" />
+    <Content Include="sass\elements\_lists.scss" />
+    <Content Include="sass\elements\_social.scss" />
+    <Content Include="sass\elements\_tables.scss" />
+    <Content Include="sass\elements\_typography.scss" />
+    <Content Include="sass\pages\_404.scss" />
+    <Content Include="sass\pages\_about.scss" />
+    <Content Include="sass\pages\_blog.scss" />
+    <Content Include="sass\pages\_columns.scss" />
+    <Content Include="sass\pages\_contacts.scss" />
+    <Content Include="sass\pages\_home.scss" />
+    <Content Include="sass\pages\_portfolio.scss" />
+    <Content Include="sass\pages\_pricing_tables.scss" />
+    <Content Include="sass\pages\_services.scss" />
+    <Content Include="sass\pages\_shortcodes.scss" />
+    <Content Include="sass\pages\_typography.scss" />
+    <Content Include="sass\settings_style.css.sass" />
+    <Content Include="sass\style.css.scss" />
+    <Content Include="sass\style_light.css.scss" />
+    <Content Include="sass\_footer.scss" />
+    <Content Include="sass\_header.scss" />
+    <Content Include="sass\_main.scss" />
+    <Content Include="sass\_menu.scss" />
+    <Content Include="sass\_responsive.scss" />
+    <Content Include="sass\color_style\blue_items.css.scss" />
+    <Content Include="sass\color_style\green_items.css.scss" />
+    <Content Include="sass\color_style\red_items.css.scss" />
+    <Content Include="sass\color_style\turquoise_items.css.scss" />
+    <None Include="Scripts\lib\jquery\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\lib\jquery\jquery-2.0.3.js" />
+    <Content Include="Scripts\lib\jquery\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\lib\jquery\jquery.animate.css.rotate.scale.js" />
+    <Content Include="Scripts\lib\jquery\jquery.cookie.js" />
+    <Content Include="Scripts\lib\jquery\jquery.css.transform.js" />
+    <Content Include="Scripts\lib\jquery\jquery.easing.1.3.js" />
+    <Content Include="Scripts\lib\jquery\jquery.flexslider-min.js" />
+    <Content Include="Scripts\lib\jquery\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\lib\jquery\jquery.quicksand.js" />
+    <Content Include="Scripts\lib\jquery\jquery.tools.min.js" />
+    <Content Include="Scripts\lib\modernizr\modernizr-2.7.1.js" />
+    <Content Include="Scripts\theme\plenius\carousel.js" />
+    <Content Include="Scripts\theme\plenius\filter.js" />
+    <Content Include="Scripts\theme\plenius\form_validation.js" />
+    <Content Include="Scripts\theme\plenius\main.js" />
+    <Content Include="Scripts\theme\plenius\PIE.htc" />
+    <Content Include="Scripts\theme\plenius\plugins.js" />
+    <Content Include="Scripts\theme\plenius\settings.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Start\AppConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -104,6 +446,10 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\lib\jquery\jquery-2.0.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,8 +459,22 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="App_Themes\Plenius\images\images\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebCtor.Core\WebCtor.Core.csproj">
+      <Project>{dea50c89-962f-41fd-b6d7-804e295b262e}</Project>
+      <Name>WebCtor.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebCtor.Service.Endpoint.WebApi\WebCtor.Service.Endpoint.WebApi.csproj">
+      <Project>{63c5d4c1-8045-4bca-933d-76dedcb756fd}</Project>
+      <Name>WebCtor.Service.Endpoint.WebApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebCtor.Service\WebCtor.Service.csproj">
+      <Project>{92533675-39f7-4930-8e0c-7277812411e6}</Project>
+      <Name>WebCtor.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

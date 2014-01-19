@@ -1,0 +1,70 @@
+/* line 4, ../../sass/settings_style.css.sass */
+.settings_box {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 165px;
+  padding: 25px 20px;
+  background: #262626;
+  z-index: 10000;
+}
+
+/* line 12, ../../sass/settings_style.css.sass */
+.settings_icon {
+  background: #262626 url("../images/settings/settings_icon.jpg");
+  position: absolute;
+  top: 0;
+  right: -33px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+}
+
+/* line 20, ../../sass/settings_style.css.sass */
+.textures, .colors, .layout {
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 24, ../../sass/settings_style.css.sass */
+.textures, .colors {
+  margin-top: 20px;
+}
+
+/* line 26, ../../sass/settings_style.css.sass */
+.titles {
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+  height: 18px;
+}
+/* line 30, ../../sass/settings_style.css.sass */
+.titles div {
+  display: inline;
+  float: left;
+  margin-right: 3px;
+  width: 50px;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 36, ../../sass/settings_style.css.sass */
+.items {
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 39, ../../sass/settings_style.css.sass */
+.items img {
+  display: inline;
+  float: left;
+  margin: 3px 3px 0 0;
+  width: 50px;
+  cursor: pointer;
+  border: 1px solid #262626;
+}
+/* line 45, ../../sass/settings_style.css.sass */
+.items img.current {
+  border: 1px solid red;
+}

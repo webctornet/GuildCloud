@@ -1,0 +1,48 @@
+/* line 7, ../../../sass/bg_style/blue_bg.css.scss */
+body {
+  background: url(../../images/bg.png);
+}
+
+/* line 10, ../../../sass/bg_style/blue_bg.css.scss */
+body .container .highlight {
+  background: url(../../images/bg_body.png);
+}
+
+/* line 13, ../../../sass/bg_style/blue_bg.css.scss */
+html body .footer_texture {
+  background: url(../../images/footer-texture.png);
+}
+/* line 15, ../../../sass/bg_style/blue_bg.css.scss */
+html body .footer_texture .inner {
+  background: url(../../images/inner.png) repeat-x;
+}
+
+/* line 19, ../../../sass/bg_style/blue_bg.css.scss */
+.main-menu .second-level {
+  background: #292e30;
+}
+
+/* line 22, ../../../sass/bg_style/blue_bg.css.scss */
+.main-menu .second-level > li > a {
+  border-top: 1px solid #383c3e;
+}
+
+/* line 25, ../../../sass/bg_style/blue_bg.css.scss */
+.plenius-form .field, .search-form .field {
+  background: #2b2e31;
+  -webkit-box-shadow: inset 0 2px 3px #242729;
+  -moz-box-shadow: inset 0 2px 3px #242729;
+  box-shadow: inset 0 2px 3px #242729;
+  border: 1px solid #242729;
+  border-bottom: 1px solid #55595b;
+}
+
+/* line 32, ../../../sass/bg_style/blue_bg.css.scss */
+footer .plenius-form .field, footer .search-form .field {
+  background: #2b2e31;
+  -webkit-box-shadow: inset 0 2px 3px #242729;
+  -moz-box-shadow: inset 0 2px 3px #242729;
+  box-shadow: inset 0 2px 3px #242729;
+  border: 1px solid #242729;
+  border-bottom: 1px solid #55595b;
+}

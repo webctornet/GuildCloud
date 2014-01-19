@@ -1,0 +1,384 @@
+@import "compass";
+@import "compass/css3";
+$border-table: #424242;
+//div layoute table style (like pricing table)
+//active column color
+	$act-title:    #4993e3;
+	$act-price:    #4386cf;
+	$act-confirm:  #4386cf;
+// TABLE 
+.price-table{	
+	.column{
+		&.active{
+			.title{
+				background-color: $act-title;
+			}
+			.price{
+				background-color: $act-price;
+			}
+			.confirm{
+				.btn{
+					@include box-shadow(inset 0 1px 0 lighten($act-confirm, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+					background-color: $act-confirm;
+					&:hover{
+						@include box-shadow(inset 0 1px 0 lighten($act-confirm, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+						background-color: lighten($act-confirm, 3%);
+					}
+					&.active, &:active{
+					  	@include box-shadow(inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(50, 50, 50, 0.05));
+					  	background-color:$act-confirm;
+					}
+				}
+			}
+		}
+	}
+}
+//END
+// ********************* CCOLORS
+$color-5:  #4386CF;         // blue color, like links
+
+.color-5{
+  color: $color-5;
+}
+// TYPOGRAPHY
+hr{
+	&.color-5{
+		border-bottom: 1px solid $color-5;
+	}
+}
+a {
+	color: $color-5;
+}
+a:hover {
+	color: $color-5;
+}
+h1,h2,h3,h4,h5,h6{
+	a:hover{
+			color: $color-5;
+	}
+}
+.content .light_theme{
+	h1,h2,h3,h4,h5,h6{
+		a:hover{
+				color: $color-5;
+		}
+	}	
+}
+// END
+// MAIN MENU
+.main-menu{
+	.first-level > li{
+		&:hover > a{
+			color: $color-5;
+			border-bottom:1px solid  $color-5;
+		}
+	}
+	.second-level > li > a {
+		&:hover{
+			color: $color-5;
+		}
+	}
+}
+// END
+// 404 FOOTER
+.description-404{
+	span{
+		color: $color-5;
+	}
+}
+// END
+// BREADCRUMBS
+.breadcrumbs{
+	a:hover{
+		color: $color-5;	
+	}
+}
+//END
+// SLIDERS
+.home-slider{
+	.flex-viewport{
+		.item{
+			.home-slider-content{
+				border-left:1px solid $color-5;
+			}
+		}
+	}
+	.flex-control-nav{
+		a{
+			&:hover, &.flex-active{
+				background-color:$color-5;
+			}		
+		}
+	}
+}
+.flexslider{
+	.flex-direction-nav{
+		a{
+			&.flex-prev:hover{
+					background-color:$color-5;	
+				
+			}
+			&.flex-next:hover{
+					background-color:$color-5;	
+			}
+		}
+	}
+}
+// END
+// HOME PAGE 
+.fresh-news{
+	.news{
+		&:hover, &.active{
+			border-bottom:1px solid $color-5;
+		}
+	}
+}
+.blog-posts{
+	.flexslider{
+		.slides{
+			.item{
+				&:hover, &.active{
+					border-bottom:1px solid $color-5;
+				}	
+			}
+		}
+	}
+}
+// END
+// SERVICES
+.quotes{
+	.flexslider{
+		li{
+			.autor{
+				span {
+					color: $color-5;
+				}
+			}
+		}
+  }
+}
+//END
+// ITEM DESCRIPTION OVERLAY
+.overlay{
+	background: $color-5;
+}
+.post{
+	.post-media{
+		.overlay{
+			background: $color-5;
+		}
+	}
+}
+.portfolio{
+	&.c-4{
+		.portfolio-items{
+			.item{
+				.overlay{
+					background: $color-5;
+				}
+			}
+		}
+	}
+	&.c-3{
+		.portfolio-items{
+			.item{
+				.overlay{
+					background: $color-5;
+				}
+			}
+		}
+	}
+	&.c-2{
+		.portfolio-items{
+			.item{
+				.overlay{
+					background: $color-5;
+				}
+			}
+		}
+	}
+}
+.about-team, .recent-projects, .blog-posts{
+	.flexslider{
+		.slides{
+			.item{
+				.overlay{
+					background: $color-5;
+				}
+			}
+		}
+	}
+}
+// END
+//SHORTCODE
+.list_1 li {
+	background:url('../../images/blue/list_1.png') 0 6px no-repeat;
+	padding:0 0 0 13px;
+}
+.list_2 li {
+	background:url('../../images/blue/list_2.png') 0 4px no-repeat;
+	padding:0 0 0 20px;
+}
+.list_3 li {
+	background:url('../../images/blue/list_3.png') 0 7px no-repeat;
+	padding:0 0 0 12px;
+}
+.list_4 li {
+	background:url('../../images/blue/list_4.png') 0 6px no-repeat;
+	padding:0 0 0 15px;
+}
+.list_5 li {
+	background:url('../../images/blue/list_5.png') 0 3px no-repeat;
+	padding:0 0 0 20px;
+}
+.list_6 li {
+	background:url('../../images/blue/list_6.png') 0 7px no-repeat;
+	padding:0 0 0 20px;
+}
+//END
+//BLOG
+.content .sidebar-left{
+  .categories, .archive {
+	 	ul li a,{
+			&:hover{				
+				background: url(../../images/blue/list_7h.png) no-repeat 7px 13px;
+				@include transition(background-position 0.2s, padding-left 0.2s, color 0.2s);
+			}
+		}
+  }
+}
+//END
+//PORTFOLIO
+.portfolio, .content .light_theme .portfolio{
+  .portfolio-navigation a{
+    &.active,&:hover{
+      color: $color-5;
+      text-decoration: none;
+    }
+  }
+  .more{
+    &.active,&:hover{
+      color: $color-5;
+      text-decoration: none;
+    }
+  }
+}
+// END
+//BLOG
+.post{
+	.post-metadata{
+		a{
+			&:hover, .active{
+				color:$color-5;
+			}
+		}
+	}
+	blockquote{
+		border-left:1px solid $color-5;
+	}
+}
+.sidebar-left, .content .light_theme .sidebar-left{
+    .categories ul li, .archive ul li, .recent-posts ul li{
+      a{
+        &:hover{
+          color: $color-5;
+        }
+      }
+    }
+  }
+.content .light_theme {
+	.sidebar-left .tag-cloud .tags li a, .page-navigation a{ 
+	  &:hover, &.active{
+	    color: $color-5;
+	  } 
+	}
+}
+//END
+// FOOTER
+html{
+	body{
+		@extend html; 
+		.footer_texture{
+			.inner{
+				footer{
+					h2 {
+						a:hover{
+							color: $color-5;
+						}
+					}
+					.widget-1{
+						.social{
+							.social-tooltip{
+								@include transition(background 0.3s);
+								@include float-left;
+								display:block;
+								height:25px;
+								width:24px;
+								margin-right:2px;
+								text-indent:-1000px;
+								text-decoration:none;
+								background-repeat:no-repeat;
+							}
+							.tweeter{
+								background-image:url(../../images/tweeter.png);
+								&:hover{
+									background:url(../../images/blue/tweeter_h.png);
+								}
+							}
+							.facebook{
+								background-image:url(../../images/facebook.png);
+								&:hover{
+									background:url(../../images/blue/facebook_h.png);
+								}
+							}
+							.vimeo{
+								background-image:url(../../images/vimeo.png);
+								&:hover{
+									background:url(../../images/blue/vimeo_h.png);
+								}
+							}
+							.linkedin{
+								background-image:url(../../images/linkedin.png);
+								&:hover{
+									background:url(../../images/blue/linkedin_h.png);
+								}
+							}
+							.flickr{
+								background-image:url(../../images/flickr.png);
+								&:hover{
+									background:url(../../images/blue/flickr_h.png);
+								}
+							}
+						}
+					}
+					.widget-2{
+						ul{
+							li{
+								a{	
+									&.active, &:hover{
+										color: $color-5;
+										background:url(../../images/blue/list_7h.png) no-repeat 8px 12px;
+									}
+								}
+							}
+						}
+					}
+					.copyrights-box{		
+						.foot-menu {
+							ul{
+								li{
+									a{
+										&:hover{
+											color: $color-5;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//END

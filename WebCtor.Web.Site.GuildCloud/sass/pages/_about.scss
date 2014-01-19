@@ -1,0 +1,32 @@
+.about-team{
+ @include short-preview();
+ .flexslider{
+    @include float-right;
+    width:690px;
+    .slides{
+      .item{
+        padding: 0;
+        height:250px;
+        .item-description{
+          width:176px;
+          height:130px;
+          padding-bottom: 0px;
+          h3{
+            padding-bottom: 0px;
+          }
+        }
+        .social{
+          @include social-2();
+        }
+      }
+    }
+  }
+}
+
+.team-info{
+  overflow: hidden;
+}
+
+.team-members{
+
+}

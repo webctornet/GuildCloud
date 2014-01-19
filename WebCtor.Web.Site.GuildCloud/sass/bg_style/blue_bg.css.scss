@@ -1,0 +1,38 @@
+@import "compass";
+@import "compass/css3";
+$form-background: #2b2e31;
+$form-border-color: #242729;
+$form-border-bottom-color: #55595b;
+
+body{
+	background: url(../../images/bg.png);
+}
+body .container .highlight{
+	background: url(../../images/bg_body.png);	
+}
+html body .footer_texture{
+	background: url(../../images/footer-texture.png);	
+	.inner{
+		background: url(../../images/inner.png) repeat-x;
+	}					
+}
+.main-menu .second-level{
+	background: #292e30;
+}
+.main-menu .second-level > li > a{
+	border-top: 1px solid #383c3e;
+}
+.plenius-form .field, .search-form .field {
+  background: $form-background;
+  @include box-shadow(inset 0 2px 3px $form-border-color);
+  border:1px solid $form-border-color;
+  border-bottom:1px solid $form-border-bottom-color;
+}
+footer{
+  .plenius-form .field, .search-form .field {
+    background: #2b2e31;
+    @include box-shadow(inset 0 2px 3px #242729);
+		border:1px solid #242729;
+		border-bottom:1px solid #55595b;
+  }
+}

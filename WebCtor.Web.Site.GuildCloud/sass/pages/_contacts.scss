@@ -1,0 +1,39 @@
+.map{
+  width: 100%;
+  height: 361px;
+  background: $color-21;
+  margin-bottom: 20px;
+}
+.contact-form{
+  width: 70%;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  .plenius-form{
+    .name{
+      float: left;
+      width: 196px;
+      margin-right: 10px;
+    }
+    .email{
+      float: left;
+      width: 196px;
+      margin-right: 10px;
+    }
+    .phone{
+      float: left;
+      width: 196px;
+    }
+    .message{
+      height: 140px;
+      clear: both;
+    }
+    .send{
+      float: left;
+    }
+  }
+}
+.contact-information{
+  margin-bottom: 40px;
+  overflow: hidden;
+}

@@ -1,0 +1,46 @@
+@import "compass"
+@import "compass/css3"
+
+.settings_box
+	position: fixed
+	top: 100px
+	left: 0
+	width: 165px
+	padding: 25px 20px
+	background: #262626
+	z-index: 10000
+.settings_icon
+	background: #262626 url('../images/settings/settings_icon.jpg')
+	position: absolute
+	top: 0 
+	right: -33px
+	width: 33px
+	height: 33px
+	cursor: pointer
+.textures, .colors, .layout
+	clear: both
+	+clearfix()
+
+.textures, .colors
+	margin-top: 20px
+.titles
+	clear: both
+	+clearfix()
+	height: 18px
+	div
+		+float-left()
+		margin-right: 3px
+		width: 50px
+		font-size: 11px
+		font-family: 'Open Sans', sans-serif
+.items
+	clear: both
+	+clearfix()
+	img
+		+float-left()
+		margin: 3px 3px 0 0
+		width: 50px
+		cursor: pointer
+		border: 1px solid #262626
+		&.current
+			border: 1px solid red

@@ -1,0 +1,167 @@
+// ************* Buttons colors styles
+
+// DEFULT BUTTONS
+$txt_color_btn:               #ffffff;       // TEXT COLOR IN BUTTON
+$txt_size_btn:                13px;          // TEXT SIZE IN BUTTON
+$bg_color_btn:                #3e4346;       // BACGROUND COLOR IF GRADIENT NOT SUPPORTED
+$bg_grad_color_btn_1:         #3e4346;       // TOP GRADIENT BUTTON
+$bg_grad_color_btn_2:         #3e4346;       // BOTTOM GRADIENT BUTTON
+$bg_grad_color_btn_1h:        #575e62;       // TOP GRADIENT BUTTON HOVER
+$bg_grad_color_btn_2h:        #393e41;       // BOTTOM GRADIENT BUTTON HOVER
+$border_color_btn:            #282828;       // BORDER COLOR
+$border_bottom_color_btn:     #000000;       // BOTTOM BORDER COLOR
+$border-radius_btn:           5px;           // BUTTONS RADIUS
+$box_shadow_btn:              inset 0 1px 1px rgba(93, 97, 100, 1), 0 1px 1px rgba(50, 50, 50, 0.05);         // BOX SHADOW
+
+											 // defult buttons :hover
+$txt_color_btn_hover:		  #ffffff;
+$bg_color_btn_hover:          #41474a;       // BACGROUND COLOR 
+											 // defult buttons .active
+$box_shadow_btn_active:       inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(50, 50, 50, 0.05);          // BOX SHADOW
+
+$blue:  					  #4386CF;  	 // blue button
+$blue-h:					  #61a5ee;		 // blue button
+
+$yellow: 					  #ff9600;       // orange button
+$yellow-h: 					  #febe64;       // orange button
+
+$red: 					  	  #e13b3b;       // red button
+$red-h: 					  #e96565;       // red button
+
+$green: 					  #72a408;	     // green button
+$green-h: 					  #97c92d;	     // green button
+
+$turquoise: 					  #5ac5d5;	     // green button
+$turquoise-h: 					  #6bebff;	     // green button
+
+// defult buttonss
+
+.btn{
+	@include background(linear-gradient(top, $bg_grad_color_btn_1, $bg_grad_color_btn_2));
+	@include OpenSanslight($txt_size_btn);
+	@include border-radius($border-radius_btn);
+  	@include box-shadow($box_shadow_btn);
+  	@include text-shadow (1px 1px 1px rgba(0, 0, 0, 0.5));
+  	@include pie-ie();
+	display:inline-block;
+	position:relative;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 1.7em;
+	color: $txt_color_btn;
+	background-color: $bg_color_btn ;
+	border: 1px solid $border_color_btn;
+	border-bottom-color: $border_bottom_color_btn;
+	cursor: pointer;
+	margin-bottom: 0px;
+	padding: 4px 12px 4px 12px;
+	&:hover {
+		color: $txt_color_btn_hover;
+		text-decoration: none;
+		background-image:none;
+		@include background(linear-gradient(top, $bg_grad_color_btn_1h, $bg_grad_color_btn_2h));
+		@include box-shadow(inset 0 1px 0 lighten($bg_grad_color_btn_2h, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+		@include transition-duration(0.8s)
+	}
+	&:active, &.active {
+	  @include box-shadow($box_shadow_btn_active);
+	  background-image: none;
+	  background-color: $bg_color_btn_hover;
+	  outline: 0;
+	}
+	&.long{
+		padding: 4px 27px;
+	}
+	&.large{
+		padding: 14px 44px;
+	}
+	&.blue{
+		background-image:none;
+		background-color: $blue;
+		@include box-shadow(inset 0 1px 0 lighten($blue, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.yellow{
+		background-image:none;
+		background-color: $yellow;
+		@include box-shadow(inset 0 1px 0 lighten($yellow, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.red{
+		background-image:none;
+		background-color: $red;
+		@include box-shadow(inset 0 1px 0 lighten($red, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.green{
+		background-image:none;
+		background-color: $green;
+		@include box-shadow(inset 0 1px 0 lighten($green, 4%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.turquoise{
+		background-image:none;
+		background-color: $turquoise;
+		@include box-shadow(inset 0 1px 0 lighten($turquoise, 4%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.blue:hover{
+		background-image:none;
+		@include background(linear-gradient(top, $blue-h, $blue));
+		@include box-shadow(inset 0 1px 0 lighten($blue, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.yellow:hover{
+		background-image:none;
+		@include background(linear-gradient(top, $yellow-h, $yellow));
+		@include box-shadow(inset 0 1px 0 lighten($yellow, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.red:hover{
+		background-image:none;
+		@include background(linear-gradient(top, $red-h, $red));
+		@include box-shadow(inset 0 1px 0 lighten($red, 10%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.green:hover{
+		background-image:none;
+		@include background(linear-gradient(top, $green-h, $green));
+		@include box-shadow(inset 0 1px 0 lighten($green, 4%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.turquoise:hover{
+		background-image:none;
+		@include background(linear-gradient(top, $turquoise-h, $turquoise));
+		@include box-shadow(inset 0 1px 0 lighten($turquoise, 4%), 0 2px 2px rgba(50, 50, 50, 0.05));
+	}
+	&.blue.active, &.blue:active{
+	  @include box-shadow($box_shadow_btn_active);
+	  background-image: none;
+	  background-color:$blue;
+	  outline: 0;
+	}
+	&.yellow.active, &.yellow:active{
+	  @include box-shadow($box_shadow_btn_active);
+	  background-image: none;
+	  background-color:$yellow;
+	  outline: 0;
+	}
+	&.red.active, &.red:active{
+	  @include box-shadow($box_shadow_btn_active);
+	  background-image: none;
+	  background-color:$red;
+	  outline: 0;
+	}
+	&.green.active, &.green:active{
+	  @include box-shadow($box_shadow_btn_active);
+	  background-image: none;
+	  background-color:$green;
+	  outline: 0;
+	}
+	&.turquoise.active, &.turquoise:active{
+	  @include box-shadow($box_shadow_btn_active);
+	  background-image: none;
+	  background-color:$turquoise;
+	  outline: 0;
+	}
+	&.disabled, &[disabled] {
+	  cursor: default;
+	  background-color: $bg_color_btn_hover;
+	  background-image: none;
+	  @include opacity(65);
+	  @include box-shadow(none);
+	}
+}
+
+// ******************************** END defult buttonss

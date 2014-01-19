@@ -1,0 +1,105 @@
+// ********************* CCOLORS
+$color-1:  #FFFFFF;         // White
+$color-2:  #c6c6c6;         // link color
+$color-3:  #989898;         // hover link color
+$color-4:  #484d4f;         // 
+$color-5:  #4386CF;         // blue color, like links
+$color-6:  #474c4d;  
+$color-7:  #F7F7F9;
+$color-8:  #E1E1E8;
+$color-9:  #F5F5F5;
+$color-10: #CCC;   
+$color-11: #eeeeee;
+$color-12: #999;             // nuted color
+$color-13: #c09853;          // text-warning
+$color-14: #b94a48;          // text-error
+$color-15: #3a87ad;          // text-info
+$color-16: #468847;          // text-success
+$color-17: #e13b3b;          // warning box
+$color-18: #72a408;          // access box
+$color-19: #ff9600;          // help box
+$color-20: #4e4e4e;
+$footer-txt-color: #747677;
+$footer-title: #a9a9a9;
+$border-table: #404446;
+$form-background: #2b2e31;
+$form-border-color: #242729;
+$form-border-bottom-color: #55595b;
+$form-text-color: #747677;
+$color-21: #484848;          //portfolio image bg
+
+//div layoute table style (like pricing table)
+//default div table color
+$border-color: #4d5254;
+$bg-color:     #2f3336;
+$bg-title:     #484c4f;
+$bg-price:     #373c3e;
+$bg-confirm:   #373c3f;
+
+//active column color
+$act-title:    #4993e3;
+$act-price:    #4386cf;
+$act-confirm:  #4386cf;
+
+@mixin pie-ie{
+  behavior:url(js/PIE.htc);
+}
+// ********************* MAIN MIXINS
+
+// Typography
+// ********************* Font color
+@mixin hex($hex: "#000"){
+  color: $hex;
+}
+// ********************* Font color END
+
+// ********************* Font family
+@mixin OpenSans ($size:11px) { 
+    font-size: $size;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+@mixin OpenSanslight ($size:11px) { 
+    font-size: $size;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+@mixin OpenSansCond ($size:11px) { 
+    font-size: $size;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+@mixin Arial{
+  font-family: Arial, sans-serif;
+}
+@mixin Monaco{
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+// Typography END
+
+// HELPERS
+//gradient
+@mixin gradient($color_1, $color_2){
+  background:$color_1;
+  background:-webkit-gradient(linear, 0 0, 0 100%, from($color_1) to($color_2));
+  background:-webkit-linear-gradient($color_1, $color_2);
+  background:-moz-linear-gradient($color_1, $color_2);
+  background:-ms-linear-gradient($color_1, $color_2);
+  background:linear-gradient($color_1, $color_2);
+  background:-o-linear-gradient($color_1, $color_2);
+  -pie-background:linear-gradient($color_1, $color_2);
+}
+
+// Color Theme
+.white_bg_wrapper{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  .empty{
+    height: 322px;
+    clear: both;
+  }
+}
+.comments .comment .sidebar{
+  background:url(../images/default-image.jpg) no-repeat;
+}

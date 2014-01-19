@@ -1,0 +1,65 @@
+.main-menu{
+	position: absolute;
+	right: 0px;
+	top: 67px;
+	padding-top:35px;
+	margin-bottom:-1px;
+	.first-level{
+		@include clearfix();
+	}
+	.first-level > li{
+		@include float-left;
+		background:url(../images/menu_separator.png) no-repeat right 10px;
+		list-style:none;
+		padding:0 6px 0 0;
+		&.last{
+			background:none;
+			padding-right: 0px;
+			a{
+				padding-right: 0px;
+			}
+		}
+		&:hover > a{
+			text-decoration:none;
+			color: $color-5;
+			outline: none;
+			border-bottom:1px solid  $color-5;
+			.second-level a{
+				color: $color-1;
+			}
+		}
+	}
+	.first-level > li > a{
+		@include OpenSanslight(13px);
+		display:block;
+		color: $color-1;
+		padding:6px 15px 26px;
+	}
+	.first-level > .last > .second-level{
+		position: absolute;
+		right: 0;
+	}
+	.second-level{
+		position:absolute;
+		display:none;
+		background:#292e30;
+		z-index:2000;
+	}
+	.second-level > li{
+		list-style:none;
+		background:none;
+		padding-left:0px;
+		
+	}
+	.second-level > li > a {
+		display:block;
+		min-width:85px;
+		color: $color-1;
+		border-top:1px solid #383c3e;
+		padding:6px 15px 6px 35px;
+		&:hover{
+			text-decoration:none;
+			color: $color-5;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.accordion{margin-bottom:0px;}
+.accord {
+	position:relative;
+	h5 {
+		@include border-radius(5px);
+		@include pie-ie();
+		position:relative;
+		background-image:url(../images/bg-block.png);
+		font-weight:bold;
+		line-height:1.65em;
+		padding:0;
+		margin:0 0 1px 0;
+		&.current{
+			@include border-radius(5px 0px);
+			background-image:url(../images/bg-block.png);
+			cursor:default;
+			margin-bottom:0px;
+			span {
+				background:url(../images/bg-toggle-minus.png) no-repeat 14px 15px;
+				cursor:default;
+			}
+		}
+		span{
+			display:block;
+			padding:11px 45px 11px 40px;
+			overflow:hidden;
+			cursor:pointer;
+			background:url(../images/bg-toggle-plus.png) no-repeat 14px 15px;
+		}
+	}
+	.accordion-content {
+		@include border-radius(0px 5px);
+		@include pie-ie();
+		display:none;
+		position:relative;
+		background-image:url(../images/bg-block.png);
+		padding:0px 45px 21px 40px;
+		margin-bottom:1px;
+	}
+}

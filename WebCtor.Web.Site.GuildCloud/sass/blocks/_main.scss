@@ -1,0 +1,4 @@
+.container{
+	@include clearfix();
+	background:url(../images/bg_body.png) no-repeat top right;
+}

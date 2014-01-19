@@ -1,0 +1,21 @@
+.page-404{
+	text-align: center;
+	h1{
+		@include OpenSanslight(167px);
+		padding-bottom: 0;
+	}
+	h2{
+		@include OpenSanslight(53px);
+	}	
+}
+.description-404{
+	margin-bottom: 40px;
+	font-size: 18px;
+	text-align: center;
+	span{
+		color: $color-5;
+	}
+	.btn{
+		margin-left: 40px;
+	}
+}

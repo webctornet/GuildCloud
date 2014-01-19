@@ -1,0 +1,88 @@
+.block_typography {
+
+	h2 {
+		padding-top: 17px;
+	}
+
+	p {
+		line-height:20px;
+	}
+
+	.generic_h1, .generic_h2, .generic_h3, .generic_h4, .generic_h5, .generic_h6 {
+		padding-top: 27px;
+	}
+
+	.h_line {
+		margin-top: 26px;
+	}
+}
+
+.generic_h1, .generic_h2, .generic_h3, .generic_h4, .generic_h5, .generic_h6 {
+	padding-bottom: 14px;
+	font-family: $Oswald;
+	color: $color_txt_1;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1em;
+}
+
+.generic_h1 {
+	font-size: 24px;
+}
+
+.generic_h2 {
+	font-size: 22px;
+}
+
+.generic_h3 {
+	font-size: 20px;
+}
+
+.generic_h4 {
+	font-size: 18px;
+}
+
+.generic_h5 {
+	font-size: 16px;
+}
+
+.generic_h6 {
+	font-size: 14px;
+}
+
+.generic_line_left {
+	padding-left: 17px;
+	border-left: 1px solid $color_txt_2;
+	font-style: italic;
+}
+.generic_line_right {
+	padding-right: 17px;
+	border-right: 1px solid $color_txt_2;
+	font-style: italic;
+}
+
+.generic_ins_1 {
+	background-color: $color_txt_1;
+	color: #37332d;
+	text-decoration: none;
+}
+.generic_ins_2 {
+	background-color: $color_txt_2;
+	color: $color_txt_1;
+	text-decoration: none;
+}
+
+blockquote.generic_blockquote_type_1 {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	background: url(../images/bg_blockquotes_1_1.png) no-repeat 0px 5px;
+
+	p {
+		margin: 0px;
+		padding: 0px 17px 0px 22px;
+		background: url(../images/bg_blockquotes_1_2.png) no-repeat right bottom;
+		font-size: 12px;
+		font-style: italic;
+	}
+}

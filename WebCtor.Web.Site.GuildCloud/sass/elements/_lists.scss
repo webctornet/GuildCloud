@@ -1,0 +1,14 @@
+@mixin base-list(){
+	@include OpenSanslight(11px);
+	margin: 0 0 15px 0;
+	padding: 0px;
+	li{
+		display:block;
+		margin: 0 0 12px 0;
+		line-height:18px;
+	}
+}
+
+.list_1, .list_2, .list_3, .list_4, .list_5, .list_6, {
+	@include base-list();
+}

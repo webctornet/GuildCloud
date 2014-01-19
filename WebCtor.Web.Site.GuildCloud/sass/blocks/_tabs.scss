@@ -1,0 +1,40 @@
+.tabs-nav {
+	@include clearfix();
+	list-style:none;
+	padding:0;
+	margin:0; 
+	li {
+		float:left;
+		background:none;
+		text-indent:0;
+		margin:0;
+		padding:0;
+		a {
+			display:block;
+			min-width: 97px;
+			position:relative;
+			background-image:url(../images/bg-tab.png);
+			text-align:center;
+			text-decoration:none;
+			color: $color-1;
+			padding:6px;
+			margin:0px 2px 0px 0px;
+			&:active,&.current,:hover{
+				outline:none;
+				background-image:url(../images/bg-block.png);
+			}
+		}
+	}
+}
+.tabs-content {
+	.tab-content {
+		@include pie-ie();
+		@include border-radius(0px 5px 5px 5px);
+		position:relative;
+		min-height:117px;
+		background-color:transparent;
+		background-image:url(../images/bg-block.png);
+		color:$color-1;
+		padding:25px 30px;	
+	}
+}

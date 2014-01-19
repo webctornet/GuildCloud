@@ -1,0 +1,73 @@
+@mixin social(){
+	@include clearfix();
+	.social-tooltip{
+		@include transition(background 0.3s);
+		@include float-left;
+		display:block;
+		height:25px;
+		width:24px;
+		margin-right:2px;
+		text-indent:-1000px;
+		text-decoration:none;
+		background-repeat:no-repeat;
+	}
+	.tweeter{
+		background-image:url(../images/tweeter.png);
+		&:hover{
+			background:url(../images/tweeter_h.png);
+		}
+	}
+	.facebook{
+		background-image:url(../images/facebook.png);
+		&:hover{
+			background:url(../images/facebook_h.png);
+		}
+	}
+	.vimeo{
+		background-image:url(../images/vimeo.png);
+		&:hover{
+			background:url(../images/vimeo_h.png);
+		}
+	}
+	.linkedin{
+		background-image:url(../images/linkedin.png);
+		&:hover{
+			background:url(../images/linkedin_h.png);
+		}
+	}
+	.flickr{
+		background-image:url(../images/flickr.png);
+		&:hover{
+			background:url(../images/flickr_h.png);
+		}
+	}
+}
+@mixin social-2(){
+	@include clearfix();
+	.social-tooltip{
+		@include transition(background 0.3s);
+		@include float-left;
+		display:block;
+		height:31px;
+		width:31px;
+		margin-right:3px;
+		text-indent:-1000px;
+		text-decoration:none;
+		background-repeat:no-repeat;
+	}
+	.tweeter{
+		background-image:url(../images/tweeter-2.png);
+	}
+	.facebook{
+		background-image:url(../images/facebook-2.png);
+	}
+	.vimeo{
+		background-image:url(../images/vimeo-2.png);
+	}
+	.google{
+		background-image:url(../images/google-2.png);
+	}
+	.linkedin{
+		background-image:url(../images/linkedin-2.png);
+	}
+}

@@ -1,0 +1,138 @@
+//big slider like home page
+$content-bg:		#000;
+$content-opacity:   0.8;
+$navi-bg:     		#000;
+$navi-opacity:		0.3;
+@mixin flexslider-big{
+	width: 930px; 
+	height: auto;
+	position:relative;
+	.flex-viewport{
+		.item{
+			position:relative;
+			img{
+				width:100%;
+				display:block;
+			}
+			.home-slider-content{
+				@include opacity($content-opacity);
+				position:absolute;
+				width:300px;
+				top:175px;
+				background-color: $content-bg;
+				border-left:1px solid $color-5;
+				padding: 25px 30px;
+				p{
+					font-size: 14px;
+					@include opacity(1);
+				}
+			}
+		}
+	}
+	.flex-control-nav{
+		height: 350px;
+		width:10px;
+		position:absolute;
+		top:0px;
+		right:-10px;
+		overflow:hidden;
+		margin:0px;
+		li{
+			display:block;
+			margin-bottom:1px;
+		}
+		a{
+			@include opacity($navi-opacity);
+			background-color:$navi-bg;
+			display: block;
+			height:70px;
+			cursor: pointer;
+			text-indent:-9999px;
+			&:hover, &.flex-active{
+				@include opacity(1);
+				background-color:$color-5;
+			}		
+		}
+	}
+}
+
+/* base slider functionality (not slider content)*/
+@mixin flexslider(){
+		position:relative;
+		.flex-viewport{
+			overflow:hidden;
+			position:relative;
+			-webkit-transition: all 0s ease; 
+			-moz-transition: all 0s ease; 
+		}
+		.slides{
+			zoom:1;
+			li{
+				background:none; 
+				padding-left:0px;
+			}
+		}
+		.flex-direction-nav{
+			*height: 0;
+			a{
+				@include transition(background-color 0.2s);
+				width: 17px; 
+				height: 17px; 
+				display: block; 
+				position: absolute; 
+				top: -35px; 
+				z-index: 10; 
+				cursor: pointer; 
+				text-indent: -9999px;
+				outline:none;
+				&.flex-prev{
+					background:url(../images/arrow-left.png) no-repeat; 
+					right:19px;
+					background-color:$color-4;
+					&:hover{
+						background-color:$color-5;	
+					}
+					
+				}
+				&.flex-next{
+					background:url(../images/arrow-right.png) no-repeat; 
+					right:0px;
+					background-color:$color-4;
+					&:hover{
+						background-color:$color-5;	
+					}
+				}
+			}
+		}
+}
+//block slider like about page
+@mixin short-preview(){
+	h2{
+		position: relative;
+	}
+	.sl-info{
+		@include float-left;
+		width: 225px;
+	}
+	.flexslider{
+		@include float-right;
+		width:690px;
+		.slides{
+			.item{
+				@include item-hover();
+				width:210px;
+				height:150px;
+				padding-right:30px;
+				.item-description{
+					width:176px;
+					height:100px;
+					padding:25px 17px;
+				}
+			}
+		}
+	}
+}
+.flexslider{
+	@include flexslider();
+}
+

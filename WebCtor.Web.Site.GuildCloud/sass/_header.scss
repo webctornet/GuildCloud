@@ -1,0 +1,100 @@
+body .container header{
+	z-index: 300
+}
+.contact-info{
+	padding: 15px 0 0;
+	color:$color-1;
+	p{
+		font-size: 13px;
+	}
+	.email{
+		float:left;
+		width:50%;
+		margin: 0;
+		a{
+			color:$color-1;
+		}
+		a:hover{
+			color:$color-5;
+		}		
+	}
+	.phone{
+		float:right;
+		width:50%;
+		text-align: right;
+		margin: 0;
+		span{
+			color:$color-2;
+		}
+	}
+}
+.summary{
+	@include clearfix();
+	float: left;
+	padding-top: 16px;
+	margin-bottom: 5px; 
+	.template-name{
+		@include OpenSansCond(44px);
+		float: left;
+		font-weight: bold;
+		a, span{
+			@include float-left();
+		}
+		a{
+			text-decoration:none;
+			color:$color-1;
+		}	
+	}
+	.template-description{
+		@include OpenSans(11px);
+		height:17px;
+		float: left;
+		border-left:1px solid $color-4;
+		padding: 3px 0 0px 5px;
+    	margin: 26px 0 0 3px;
+		a{
+			text-decoration:none;
+			color:$color-3;
+		}
+	}
+}
+.page-info{
+	@include clearfix();
+	@include float-left;
+	padding: 20px 0 0 0;
+	a{
+		text-decoration:none;
+		color:$color-1;
+	}
+	.page-name{
+		@include OpenSanslight(60px);
+		float: left;
+		clear: both;
+		margin-bottom: 5px;
+		padding-bottom:0px;
+	}
+	.page-description{
+		@include OpenSanslight(24px);
+		float: left;
+		clear: both;
+		padding-bottom: 3px;
+		/*a:hover{            //hide hover
+			color: $color-1;
+		}*/
+	}
+}
+.breadcrumbs{
+	@include OpenSanslight(11px);
+	float: right;
+	margin-top: 90px;
+	p{
+		margin: 0;
+	}
+	a{
+		color: $color-1;	
+	}
+	a:hover{
+		color: $color-5;	
+	}
+}
+

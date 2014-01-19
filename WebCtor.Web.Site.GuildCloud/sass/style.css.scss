@@ -1,0 +1,74 @@
+// **************************************** 
+//  Team: Artureanec
+//  Author: Melnichuk Vladimir
+//  
+// **************************************** 
+//COPASS
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/float";
+// Main compass css3 mixins
+//   @include box-shadow($box_shadow_1)
+//   @include text-shadow ($txt_shadow_1)
+//   @include border-radius(0)
+//   @include transition(all 0.5s ease)
+//   @include clearfix()
+
+// **************************************** BASE SASS VAR, COLORS AND MIXINS
+@import "elements/base";
+// **************************************** BASE SASS VAR, COLORS AND MIXINS END
+
+// **************************************** BASE ELEMENTS
+//TYPOGRAPHY
+@import "elements/typography";
+//LISTS
+@import "elements/lists";
+//TABLES
+@import "elements/tables";
+//FORMS
+@import "elements/forms";
+//BUTTONS
+@import "elements/buttons"; 
+//SOCIAL NETWORKS
+@import "elements/social";
+//BLOCK HOVER LIKE PORTFOLIO
+@import "elements/item_hover"; 
+// **************************************** NONE SEMANTIC HELPER CLASSES
+@import "elements/helper_classes";
+// **************************************** NONE SEMANTIC HELPER CLASSES END
+// **************************************** BASE ELEMENTS END
+
+// **************************************** MAIN BLOCKS 
+//CLIENT BLOCK
+@import "blocks/clients";
+//STYLE BOXES
+@import "blocks/style-boxes";
+//TABS
+@import "blocks/tabs";
+//ACCORDION
+@import "blocks/accordion";
+//SLIDER
+@import "blocks/slider";
+// **************************************** MAIN BLOCKS END
+
+// **************************************** LAYOUT STRUCTURE
+//MAIN LAYOUT
+@import "main";
+@import "header";
+@import "menu";
+@import "footer";
+//PAGES
+@import "pages/404";
+@import "pages/home";
+@import "pages/shortcodes";
+@import "pages/services";
+@import "pages/portfolio";
+@import "pages/about";
+@import "pages/contacts";
+@import "pages/pricing_tables";
+@import "pages/blog";
+//PAGES END
+//RESPOSIVE
+@import "responsive";
+// **************************************** LAYOUT STRUCTURE END

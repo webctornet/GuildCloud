@@ -1,0 +1,23 @@
+.price-table{
+	@include div-table();
+	&.col-5{
+		.column{
+			width: 20%;
+		}
+	}
+	&.col-4{
+		.column{
+			width: 25%;
+		}
+	}
+	&.col-3{
+		.column{
+			width: 33.33%;
+		}
+	}
+	&.col-2{
+		.column{
+			width: 50%;
+		}
+	}
+}
